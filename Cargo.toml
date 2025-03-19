@@ -1,0 +1,14 @@
+[package]
+name = "seqsee"
+version = "0.1.0"
+edition = "2021"
+description = "A tool for parsing and displaying ANSI escape sequences in a human-readable format"
+authors = ["Kirill Furtikov"]
+license = "MIT"
+
+[dependencies]
+
+clap = { version = "4.5.32", features = ["derive"] }
+termio = "0.1.0"      # For colorize text
+tabled = "0.18"       # For table output
+thiserror = "1.0"     # For error handling

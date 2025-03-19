@@ -1,0 +1,1 @@
+Hello \e[1mAwesome\e[0m World!\e[31mJust\e[0m\e[32mLook\e[0m\e[1;33mat\e[0m\e[4;36mthis\e[0m\e[7mit's\e[0m\e[1;4;31mawesome\e[0m cursor:\e[5A\e[10C\e[1B\e[2D
