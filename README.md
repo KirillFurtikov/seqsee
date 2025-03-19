@@ -20,6 +20,11 @@ cargo build --release
 cargo install --path .
 ```
 
+### From cargo
+```bash
+cargo install seqsee
+```
+
 ## 💡 Usage
 
 ### 🔍 Describing escape sequences
@@ -32,7 +37,7 @@ printf "\x1b[36mRust\x1b[1;4m is \x1b[41m awesome\x1b[0m\r\n\b" | seqsee
 
 This will output a detailed breakdown of each ANSI sequence:
 
-```
+```bash
 Type                   Esc                     Desc                          
  CSI   \x1b[36m   Set mode: Foreground color: 6 
  Text      Rust       Rust                          
@@ -56,7 +61,7 @@ seqsee -f test_ansi.txt
 
 For example, with a file containing:
 
-```
+```bash
 \e[38;5;208mWarning:\e[0m \e[3mSystem\e[0m \e[4;32mstatus\e[0m: \e[1;5;33mCRITICAL\e[0m\nCursor demo: \e[3A\e[5C↑ here\e[3B\e[8C↓ there
 ```
 
