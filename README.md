@@ -37,19 +37,8 @@ printf "\x1b[36mRust\x1b[1;4m is \x1b[41m awesome\x1b[0m\r\n\b" | seqsee
 
 This will output a detailed breakdown of each ANSI sequence:
 
-```bash
-Type                   Esc                     Desc                          
- CSI   \x1b[36m   Set mode: Foreground color: 6 
- Text      Rust       Rust                          
- CSI   \x1b[1;4m  Set mode: Bold, Underline     
- Text       is         is                           
- CSI   \x1b[41m   Set mode: Background color: 1 
- Text       awesome    awesome                      
- CSI   \x1b[0m    Set mode: Reset all           
- Ctrl  \r         Carriage return               
- Ctrl  \n         Line feed (new line)          
- Ctrl  \b         Backspace                           
-```
+<img width="424" alt="image" src="https://github.com/user-attachments/assets/e45f8091-a3dc-4ba0-8779-cf91b5587afb" />
+
 
 ### 📄 Reading text files with escape sequences
 
@@ -57,12 +46,6 @@ You can parse files containing ANSI escape sequences:
 
 ```bash
 seqsee -f test_ansi.txt
-```
-
-For example, with a file containing:
-
-```bash
-\e[38;5;208mWarning:\e[0m \e[3mSystem\e[0m \e[4;32mstatus\e[0m: \e[1;5;33mCRITICAL\e[0m\nCursor demo: \e[3A\e[5C↑ here\e[3B\e[8C↓ there
 ```
 
 Seqsee will parse both the actual escape sequences and also the literal `\e` escape notations.
